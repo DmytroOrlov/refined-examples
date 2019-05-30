@@ -12,6 +12,16 @@ lazy val `refined-examples` = (project in file("."))
     addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.10"),
     addCompilerPlugin(("org.scalameta" % "paradise" % "3.0.0-M11").cross(CrossVersion.full)),
     libraryDependencies ++= Seq(
+      "eu.timepit" %% "refined"                 % "0.9.6",
+      "eu.timepit" %% "refined-cats"            % "0.9.6", // optional
+      "eu.timepit" %% "refined-eval"            % "0.9.6", // optional, JVM-only
+      "eu.timepit" %% "refined-jsonpath"        % "0.9.6", // optional, JVM-only
+      "eu.timepit" %% "refined-pureconfig"      % "0.9.6", // optional, JVM-only
+      "eu.timepit" %% "refined-scalacheck"      % "0.9.6", // optional, scalacheck 1.14
+      "eu.timepit" %% "refined-scodec"          % "0.9.6", // optional
+      "eu.timepit" %% "refined-scopt"           % "0.9.6", // optional
+      "eu.timepit" %% "refined-shapeless"       % "0.9.6", // optional
+      "com.chuusai" %% "shapeless" % "2.3.3",
       "org.scalaz" %% "scalaz-zio" % zioVersion,
       "org.scalaz" %% "scalaz-zio-interop-cats" % zioVersion,
       "io.monix" %% "monix" % "3.0.0-RC2",
